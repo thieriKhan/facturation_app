@@ -228,6 +228,11 @@ const statData = [
         title: 'Average Price',
         value: '$ 15.4'
     }
+    , {
+        icon: 'ri-briefcase-4-line',
+        title: 'Average Price',
+        value: '$ 15.4'
+    }
 ];
 
 export { revenueChart, salesAnalytics, sparklineEarning, sparklineMonthly, chatData, transactions, statData };
