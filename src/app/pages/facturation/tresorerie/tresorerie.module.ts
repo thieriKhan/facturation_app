@@ -9,6 +9,10 @@ import { NgbAccordionModule, NgbNavModule, NgbTypeaheadModule, NgbPaginationModu
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Ng5SliderModule } from 'ng5-slider';
 import { UiModule } from 'src/app/shared/ui/ui.module';
+import { AjustmentComponent } from './ajustment/ajustment.component';
+import { ListTreasuryComponent } from './list-treasury/list-treasury.component';
+import { TransfertComponent } from './transfert/transfert.component';
+import { TresorerieRoutingModule } from './tresorerie-routing.module';
 
 @NgModule({
   imports: [
@@ -16,7 +20,7 @@ import { UiModule } from 'src/app/shared/ui/ui.module';
     FormsModule,
     DropzoneModule,
     ReactiveFormsModule,
- 
+    TresorerieRoutingModule,
     UiModule,
     ArchwizardModule,
     NgbAccordionModule,
@@ -29,6 +33,6 @@ import { UiModule } from 'src/app/shared/ui/ui.module';
     Ng5SliderModule,
     NgbModalModule
   ],
-  declarations: [TresorerieComponent]
+  declarations: [TresorerieComponent, AjustmentComponent, ListTreasuryComponent, TransfertComponent]
 })
 export class TresorerieModule { }

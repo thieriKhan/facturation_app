@@ -8,7 +8,7 @@ import { NgbNavModule, NgbDropdownModule, NgbTooltipModule } from '@ng-bootstrap
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DndModule } from 'ngx-drag-drop';
-import { PerfectScrollbarConfigInterface, PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { UiModule } from 'src/app/shared/ui/ui.module';
 
 import { UIModule } from '../ui/ui.module';
@@ -17,6 +17,7 @@ import { ClientModule } from './client/client.module';
 import { DepenseModule } from './depense/depense.module';
 import { FactureModule } from './facture/facture.module';
 import { ProduitModule } from './produit/produit.module';
+import { FacturationRoutingModule } from './facturation-routing.modules';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -46,7 +47,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgApexchartsModule,
     PerfectScrollbarModule,
     DndModule,
+    FacturationRoutingModule
 
+  ],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
   ]
 })
 export class FacturationModule { }

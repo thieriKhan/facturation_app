@@ -4,15 +4,26 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ListCustomerComponent } from './list-customer/list-customer.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 const routes: Routes = [
     {
         path: 'add',
         component: AddCustomerComponent
     },
+    
+    {
+        path: 'list',
+        component: ListCustomerComponent
+    },
+    {
+        path: 'reservation',
+        component: ReservationComponent
+    },
     {
         path: '',
-        component: ListCustomerComponent
+        pathMatch: 'full',
+        redirectTo: 'list'
     }
   
 ];

@@ -21,7 +21,7 @@ validationform: FormGroup;
 constructor(private modalService: NgbModal, public formBuilder: FormBuilder) { }
 
 ngOnInit(): void {
-  this.breadCrumbItems = [{ label: 'Ecommerce' }, { label: 'Customers', active: true }];
+  this.breadCrumbItems = [{ label: 'Clients' }, { label: 'Liste des clients', active: true }];
 
   this.validationform = this.formBuilder.group({
     name: ['', [Validators.required]],

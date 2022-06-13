@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./transfert.component.scss']
 })
 export class TransfertComponent implements OnInit {
+    // bread crumb items
+    breadCrumbItems: Array<{}>;
 
   constructor() { }
 
-  ngOnInit() {
+  
+
+
+  ngOnInit(): void {
+    this.breadCrumbItems = [{ label: 'Tresorerie' }, { label: 'Transfert', active: true }];
+  
   }
 
 }

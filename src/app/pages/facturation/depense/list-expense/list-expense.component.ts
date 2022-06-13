@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ListExpenseComponent implements OnInit {
 
   constructor() { }
+  breadCrumbItems: Array<{}>;
+
 
   ngOnInit() {
+    this.breadCrumbItems = [{ label: 'Depenses' }, { label: 'Liste des depenses', active: true }];
   }
 
 }

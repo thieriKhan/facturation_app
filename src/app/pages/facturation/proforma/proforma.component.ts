@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProformaComponent implements OnInit {
 
   constructor() { }
+ 
+  // bread crumb items
+  breadCrumbItems: Array<{}>;
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.breadCrumbItems = [{ label: 'Proforma' }, { label: 'Proforma', active: true }];
+   
+    //this._fetchData();
   }
+
 
 }

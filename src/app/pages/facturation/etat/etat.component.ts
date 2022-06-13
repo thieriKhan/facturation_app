@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class EtatComponent implements OnInit {
 
   constructor() { }
+  breadCrumbItems: Array<{}>;
+
 
   ngOnInit() {
+    this.breadCrumbItems = [{ label: 'Etat' }, { label: 'etats', active: true }];
   }
 
 }

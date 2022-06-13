@@ -25,20 +25,20 @@ export const MENU: MenuItem[] = [
             {
                 id: 6,
                 label: 'MENUITEMS.CUSTOMERS.LIST',
-                link: '/customer/list',
+                link: '/facturation/client/list',
                 parentId: 3
             },
             {
                 id: 7,
                 label: 'MENUITEMS.CUSTOMERS.ADD',
-                link: '/customer/add',
+                link: '/facturation/client/add',
                 icon: 'ri-store-2-line',
                 parentId: 3
             },
             {
                 id: 8,
                 label: 'MENUITEMS.CUSTOMERS.RESERVATIONS',
-                link: '/customer/reservations',
+                link: '/facturation/client/reservation',
                 parentId: 3
             },
         ]
@@ -48,7 +48,7 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.PROFORMA.TEXT',
         icon: 'ri-shopping-cart-line',
        
-        link: '/proforma'
+        link: 'facturation/proforma'
     },
     
     {
@@ -59,26 +59,26 @@ export const MENU: MenuItem[] = [
             {
                 id: 11,
                 label: 'MENUITEMS.BILLS.LIST',
-                link: '/facture/list',
+                link: 'facturation/facture/list',
                 parentId: 10
             },
             {
                 id: 12,
                 label: 'MENUITEMS.BILLS.ADD',
-                link: '/facture/creer',
+                link: 'facturation/facture/add',
                 icon: 'ri-store-2-line',
                 parentId: 10
             },
             {
                 id: 13,
                 label: 'MENUITEMS.BILLS.PAYMENTS',
-                link: '/factures/paiements',
+                link: 'facturation/factures/paiement',
                 parentId: 10
             },
             {
                 id: 14,
                 label: 'MENUITEMS.BILLS.REFUNDS',
-                link: '/factures/remboursement',
+                link: 'facturation/facture/remboursement',
                 parentId: 10
             },
         ]
@@ -92,20 +92,20 @@ export const MENU: MenuItem[] = [
             {
                 id: 11,
                 label: 'MENUITEMS.EXPENSE.LIST',
-                link: '/facture/list',
+                link: 'facturation/depense/list',
                 parentId: 3
             },
             {
                 id: 12,
                 label: 'MENUITEMS.EXPENSE.ADD',
-                link: '/facture/creer',
+                link: 'facturation/depense/add',
                 icon: 'ri-store-2-line',
                 parentId: 3
             },
             {
                 id: 13,
                 label: 'MENUITEMS.EXPENSE.REPAYMENTS',
-                link: '/depenses/paiements',
+                link: 'facturation/depense/reversement',
                 parentId: 3
             },
           
@@ -222,19 +222,19 @@ export const MENU: MenuItem[] = [
             {
                 id: 19,
                 label: 'MENUITEMS.TREASURY.AJUSTMENT',
-                link: '/tresorerie/ajustement',
+                link: 'facturation/tresorerie/ajustement',
                 parentId: 18
             },
             {
                 id: 20,
                 label: 'MENUITEMS.TREASURY.TRANSFERT',
-                link: '/tresorerie/transfert',
+                link: 'facturation/tresorerie/transfert',
                 parentId: 18
             },
             {
                 id: 21,
                 label: 'MENUITEMS.TREASURY.LIST',
-                link: '/tresoreie/list',
+                link: 'facturation/tresoreie/list',
                 parentId: 18
             },
            
@@ -244,7 +244,7 @@ export const MENU: MenuItem[] = [
         id: 18,
         label: 'MENUITEMS.STATES.TEXT',
         icon: 'ri-grid-line',
-        link: '/etats/'
+        link: 'facturation/etat/'
         
     },
     {

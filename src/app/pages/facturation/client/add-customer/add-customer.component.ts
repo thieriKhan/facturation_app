@@ -12,7 +12,7 @@ export class AddCustomerComponent implements OnInit {
 
 
   ngOnInit() {
-    this.breadCrumbItems = [{ label: 'Client' }, { label: 'Creer client', active: true }];
+    this.breadCrumbItems = [{ label: 'Client' }, { label: 'Ajout client', active: true }];
   }
 
 }
