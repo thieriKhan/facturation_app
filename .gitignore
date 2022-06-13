@@ -119,3 +119,4 @@ node_modules/bindings/bindings.js
 node_modules/.package-lock.json
 node_modules/__ngcc_entry_points__.json
 package-lock.json
+node_modules/__ngcc_entry_points__.json
