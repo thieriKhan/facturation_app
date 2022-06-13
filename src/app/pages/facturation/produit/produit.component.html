@@ -1,3 +1,121 @@
 <div class="container-fluid">
-    <app-pagetitle title="Produit" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    <app-pagetitle title="Produits" [breadcrumbItems]="breadCrumbItems"></app-pagetitle>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div>
+              <!--  -->
+              <a href="javascript:void(0);" class="btn btn-success mb-2" (click)="openModal(content)">
+                <i class="mdi mdi-plus mr-2"></i> Ajouter un produit
+              </a>
+            </div>
+            <div class="table-responsive mt-3">
+              <table class="table table-centered datatable dt-responsive nowrap"
+                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                <thead class="thead-light">
+                  <tr>
+                    <th style="width: 20px;">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customercheck" />
+                        <label class="custom-control-label" for="customercheck">&nbsp;</label>
+                      </div>
+                    </th>
+                    <th>Code</th>
+                    <th>Intitulé</th>
+                    <th>Prix U</th>
+                    <th>Statut</th>
+                    <th style="width: 120px;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of customersData; let i= index">
+                    <td>
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" :id="customercheck{{i}}" />
+                        <label class="custom-control-label" :for="customercheck{{i}}">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>{{item.code_pr}}</td>
+                    <td>{{item.name_pr}}</td>
+                    <td>{{item.price_pr}}</td>
+                    <td>{{item.statut_pr}}</td>
+                    <td>
+                      <a href="javascript:void(0);" class="mr-3 text-primary" v-b-tooltip.hover title="Edit">
+                        <i class="mdi mdi-pencil font-size-18"></i>
+                      </a>
+                      <a href="javascript:void(0);" class="text-danger" v-b-tooltip.hover title="Delete">
+                        <i class="mdi mdi-trash-can font-size-18"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Contacts model  -->
+<ng-template #content role="document" let-modal="close">
+  <div class="modal-header">
+    <h5 class="modal-title">Ajouter un produit</h5>
+    <button type="button" class="close" aria-label="Close" (click)="modal('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body p-3">
+    <div class="text-left">
+      <form (ngSubmit)="saveData()" [formGroup]="validationform">
+
+        <div class="form-group">
+          <label for="name">Code produit</label>
+          <input type="text" class="form-control" id="code_pr" placeholder="Entrer Code produit" formControlName="code_pr"
+            [ngClass]="{'is-invalid': submitted && form.name.errors}">
+          <div *ngIf="submitted && form.name.errors" class="invalid-feedback">
+            <span *ngIf="form.name.errors.required">Code requis.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Intitulé du produit</label>
+          <input class="form-control" id="name_pr" placeholder="Entrer nom du produit" formControlName="name_pr"
+            [ngClass]="{'is-invalid': submitted && form.email.errors}">
+          <div *ngIf="submitted && form.email.errors" class="invalid-feedback">
+            <span *ngIf="form.email.errors.required">Intitulé est requis.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Prix Unitaire </label>
+          <input type="number" class="form-control" placeholder="Entrer prix unitaire" formControlName="price_pr"
+            [ngClass]="{'is-invalid': submitted && form.phone.errors}" minlength="10">
+          <div *ngIf="submitted && form.phone.errors" class="invalid-feedback">
+            <span *ngIf="form.phone.errors.required">Prix unitaire requis.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Statut </label>
+          <select type="" class="form-control" formControlName="statut_pr"
+            [ngClass]="{'is-invalid': submitted && form.balance.errors}">
+            <option value="">Choisir statut</option>
+            <option value="A">Actif</option>
+            <option value="I">Inactif</option>
+          </select>
+          <div *ngIf="submitted && form.balance.errors" class="invalid-feedback">
+            <span *ngIf="form.balance.errors.required">Statut requis.</span>
+          </div>
+        </div>
+
+        <div class="text-right">
+          <button type="submit" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-danger ml-1" (click)="modal('close click')">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+ 
