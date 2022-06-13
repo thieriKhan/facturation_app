@@ -48,7 +48,7 @@ export const MENU: MenuItem[] = [
         label: 'MENUITEMS.PROFORMA.TEXT',
         icon: 'ri-shopping-cart-line',
        
-        link: 'facturation/proforma'
+        link: '/facturation/proforma'
     },
     
     {
@@ -59,26 +59,26 @@ export const MENU: MenuItem[] = [
             {
                 id: 11,
                 label: 'MENUITEMS.BILLS.LIST',
-                link: 'facturation/facture/list',
+                link: '/facturation/facture/list',
                 parentId: 10
             },
             {
                 id: 12,
                 label: 'MENUITEMS.BILLS.ADD',
-                link: 'facturation/facture/add',
+                link: '/facturation/facture/add',
                 icon: 'ri-store-2-line',
                 parentId: 10
             },
             {
                 id: 13,
                 label: 'MENUITEMS.BILLS.PAYMENTS',
-                link: 'facturation/factures/paiement',
+                link: '/facturation/facture/paiement',
                 parentId: 10
             },
             {
                 id: 14,
                 label: 'MENUITEMS.BILLS.REFUNDS',
-                link: 'facturation/facture/remboursement',
+                link: '/facturation/facture/remboursement',
                 parentId: 10
             },
         ]
@@ -92,20 +92,20 @@ export const MENU: MenuItem[] = [
             {
                 id: 11,
                 label: 'MENUITEMS.EXPENSE.LIST',
-                link: 'facturation/depense/list',
+                link: '/facturation/depense/list',
                 parentId: 3
             },
             {
                 id: 12,
                 label: 'MENUITEMS.EXPENSE.ADD',
-                link: 'facturation/depense/add',
+                link: '/facturation/depense/add',
                 icon: 'ri-store-2-line',
                 parentId: 3
             },
             {
                 id: 13,
                 label: 'MENUITEMS.EXPENSE.REPAYMENTS',
-                link: 'facturation/depense/reversement',
+                link: '/facturation/depense/reversement',
                 parentId: 3
             },
           
@@ -211,7 +211,7 @@ export const MENU: MenuItem[] = [
         id: 18,
         label: 'MENUITEMS.PRODUCTS.TEXT',
         icon: 'ri-grid-line',
-        link: '/produits/'
+        link: '/facturation/produit'
         
     },
     {
@@ -222,19 +222,19 @@ export const MENU: MenuItem[] = [
             {
                 id: 19,
                 label: 'MENUITEMS.TREASURY.AJUSTMENT',
-                link: 'facturation/tresorerie/ajustement',
+                link: '/facturation/tresorerie/ajustement',
                 parentId: 18
             },
             {
                 id: 20,
                 label: 'MENUITEMS.TREASURY.TRANSFERT',
-                link: 'facturation/tresorerie/transfert',
+                link: '/facturation/tresorerie/transfert',
                 parentId: 18
             },
             {
                 id: 21,
                 label: 'MENUITEMS.TREASURY.LIST',
-                link: 'facturation/tresoreie/list',
+                link: '/facturation/tresorerie/list',
                 parentId: 18
             },
            
@@ -244,7 +244,7 @@ export const MENU: MenuItem[] = [
         id: 18,
         label: 'MENUITEMS.STATES.TEXT',
         icon: 'ri-grid-line',
-        link: 'facturation/etat/'
+        link: '/facturation/etat'
         
     },
     {

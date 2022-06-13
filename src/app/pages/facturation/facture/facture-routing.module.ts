@@ -20,7 +20,7 @@ const routes: Routes = [
 
     },
     {
-        path: 'payement',
+        path: 'paiement',
         component: PaymentsComponent
     },
     {

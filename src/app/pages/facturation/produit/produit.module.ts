@@ -1,3 +1,4 @@
+import { ProduitRoutingModule } from './produit-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProduitComponent } from './produit.component';
@@ -13,6 +14,7 @@ import { UiModule } from 'src/app/shared/ui/ui.module';
     UiModule,
     NgbAccordionModule,
     NgbNavModule,
+    ProduitRoutingModule
   ],
   declarations: [ProduitComponent]
 })
